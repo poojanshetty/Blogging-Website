@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title> Home Page</title>
+
+{% endblock %}
+
+{% block body %}
+<br>
+    <h5>  Home Page </h5>
+		<br>
+        <div>
+
+      <div class="bg-light p-5 rounded">
+        <div class="col-sm-8 mx-auto">
+
+          <h1>Welcome to Blog Posts, {{ current_user.username }}</h1>
+            <br>
+          <p>In this blog you can share a programming code of any languages. And disscuss about different technology and various programming
+              such as html, css, java ,python, c,c++, c#, machine learning , data science etc., and any various concepts on computer science.</p>
+            <p> In this blog you can post your queries to find answer and your ideologies, nd help others with there queries, share your knowledge ,know more about the software or IT related information.</p>
+
+
+            <p>
+            <a class="btn btn-primary" href="/posts" role="button">View Blog Posts &raquo;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+<div class="carousel-inner">
+					<div class="item active">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/1.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/2.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/3.jpg" class="img-responsive" alt=""></div></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/4.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/5.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/6.jpg" class="img-responsive" alt=""></div></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/7.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/8.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/9.jpg" class="img-responsive" alt=""></div></div>
+						</div>
+					</div>
+				</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+{% endblock %}

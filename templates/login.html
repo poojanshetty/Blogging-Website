@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title> Login </title>
+{% endblock %}
+
+{% block body %}
+    <br>
+    <h1> <center> Login </center></h1>
+    <hr>
+    <main class="form-signin text-center" style="display:flex;">
+        <img class="mb-4" src="{{ url_for('static', filename='assets/blog.jpg') }}" alt="" style="width:40vw; margin-top:5vh;">
+        <form method="POST" class="form-signin"  style="width:50vw; margin-left:5vw; margin-top:5vh;">
+            {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <br>
+            <div style="margin-bottom:2vh;">
+                {{ form.username(class="form-control", placeholder="User Name") }}
+            </div>
+            <div style="margin-bottom:2vh;">
+                {{ form.password(class="form-control", placeholder="Password") }}
+            </div>
+
+            <div class="checkbox mb-3">
+                <h6>Do not have an account?</h6>
+                <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}"type="submit">Register</a>
+            </div>
+<!--            <button class="w-100 btn btn-lg btn-primary" href="{{ url_for('index') }}" type="submit">Sign in</button>-->
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </main>
+
+{% endblock %}

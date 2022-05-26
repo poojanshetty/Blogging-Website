@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Posts</title>
+{% endblock %}
+{% block body %}
+<h1> <center> Create New Blog Post:</center></h1>
+<hr>
+<center><img class="mb-4" src="{{ url_for('static', filename='assets/new post.png') }}" alt="" width="560" height="260"></center>
+<h2> New Post: </h2>
+<hr>
+<form action='/posts' method ='POST'>
+   <label for = "title" class="form-label"> Title :</label>
+    <input aria-label="Search" class="form-control"  name ='title' id='title' placeholder="Title of the post" type="text">
+    <br>
+    <br>
+
+
+   <label for="author" class="form-label"> Author :</label>
+    <input aria-label="Search" class="form-control" name ='author' id='author' placeholder="author of the post" type="text">
+    <br>
+    <br><label for="content" class="form-label"> Content :</label>
+
+
+  <textarea class="form-control" name ='content' id="content" placeholder="contents of your post" type="text"rows="3"></textarea>
+    <br>
+    <br>
+
+
+    <input type="submit" value='POST'>
+
+</form>
+<br>
+<hr>
+{% endblock %}

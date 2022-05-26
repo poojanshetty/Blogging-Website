@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> EDIT</title>
+{% endblock %}
+{% block body %}
+<h1> <center>  All Posts </center></h1>
+<hr>
+<h2> Update Blog Post: </h2>
+<hr>
+<center>
+    <img class="mb-4" src="{{ url_for('static', filename='assets/register.png') }}" alt="" width="560" height="360" style="margin-top:5vh;">
+</center>
+<form action='/posts/edit/{{post.id}}' method ='POST'>
+    <label for = "title" class="form-label"> Title :</label>
+    <input aria-label="Search" class="form-control"  name ='title' id='title' value="{{post.title}}" type="text">
+    <br>
+    <br>
+
+
+   <label for="author" class="form-label"> Author :</label>
+    <input aria-label="Search" class="form-control" name ='author' id='author' value="{{post.author}}" type="text">
+    <br>
+    <br><label for="content" class="form-label"> Content :</label>
+
+
+  <textarea class="form-control" name ='content' id="content"  type="text"rows="3">{{post.content}}</textarea>
+    <br>
+    <br>
+
+
+    <input type="submit" value='UPDATE'>
+
+</form>
+<br>
+<hr>
+{% endblock %}
