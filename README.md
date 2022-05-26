@@ -15,3 +15,5 @@ In this blog you can post your ideologies and future technologies, and help othe
 - run (in terminal)
     pip install -r requirements.txt
 -python main.py
+
+
