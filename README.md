@@ -11,6 +11,6 @@ In this blog you can post your ideologies and future technologies, and help othe
 
 - Set up a virtual enviroment. <br>
 - Or if virtual environment present activate it.<br>
-- source /path/venv/bin/activate. (note: please give your exact path according to file set up in folder) <br>
+- source /path/venv/bin/activate. (note: please give your exact of activate path according to file setup in folder) <br>
 - pip install -r requirements.txt <br>
 - python main.py <br>
