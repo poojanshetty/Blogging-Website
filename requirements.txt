@@ -9,3 +9,5 @@ numpy>=1.17.4
 pandas>=0.25.3
 sqlalchemy
 SQLAlchemy-Utils>=0.36.8
+flask_migrate="*"
+requests==2.26.0

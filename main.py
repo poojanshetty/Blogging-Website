@@ -8,6 +8,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, HiddenField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
 from datetime import datetime
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
@@ -17,7 +18,6 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login_page'
 login_manager.login_message_category = 'info'
-
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -66,7 +66,8 @@ class login(db.Model):
 
     def __repr__(self):
         return 'Login ' + str(self.email)
-
+with app.app_context():
+    db.create_all()
 
 # ************************************* Forms *************************************
 
@@ -205,4 +206,4 @@ def new_post():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,  host='0.0.0.0', port=5001)
